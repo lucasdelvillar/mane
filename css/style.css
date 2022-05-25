@@ -1,0 +1,596 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:visited, a:active{
+  text-decoration: none;
+  cursor: pointer;
+  /* need this to inherit color of container */
+  color: inherit;
+}
+
+h1 {
+  z-index: 2;
+  position: absolute;
+  top: 35%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: rgba(255, 0, 0, 0.9);
+  font-size: 12.5rem;
+  font-family: 'Koulen', cursive;
+}
+
+/******************************************
+/* BANNER AREA
+/*******************************************/
+
+.banner-area-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.banner-area-left {
+  position: relative;
+  background-image: url('../images/barbers/four.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* Allows for background to cover size of container*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Keeps the photo also in the center and helps with resizing*/
+  background-position: center;
+  width: 50%;
+  height: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.dropdown {
+  position: fixed;
+  top: 40px;
+  left: 110px;
+}
+
+.bottom-white {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.banner-area-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+}
+
+
+.banner-area {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 75px;
+  width: 100%;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+}
+
+.banner-right-images {
+  margin: auto 50%;
+  width: 50%;
+  height: auto;
+}
+
+.bottom-black {
+  position: absolute;
+  bottom: 5px;
+  left: 30px;
+  color: black;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.primary-nav {
+  position: fixed;
+  top: 45px;
+  right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "brandon-grotesque",sans-serif;
+  font-weight: 300;
+  color: black;
+}
+
+.primary-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-nav ul li {
+  padding: 0 20px;
+}
+
+.primary-nav ul li:first-child, .primary-nav ul li:last-child {
+  color: red;
+}
+
+.primary-nav ul li:hover {
+  color: red;
+}
+
+@media (max-width: 900px) {
+  .banner-area-right{
+    display: none;
+  }
+
+  .banner-area-left {
+    width: 100%;
+  }
+
+  .hidden {
+    display: inline-block;
+  }
+}
+
+/******************************************
+/* ABOUT
+/*******************************************/
+
+
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #fbf8f2;
+}
+
+.about-info {
+  width: 45%;
+  min-width: 600px;
+  border: 2px solid black;
+  padding: 3em 3em;
+  font-family: "brandon-grotesque",sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.brand-name {
+  color: rgba(255, 0, 0, 0.9);
+  font-family: 'Koulen', cursive;
+}
+
+.highlight {
+  color: red;
+  font-family: 'Roboto Serif', serif;
+  font-weight: bold;
+}
+
+@media (max-width: 630px) {
+
+  .about {
+    height: 100vh;
+  }
+  .about-info {
+    width: 60%;
+    min-width: 400px;
+    padding: 2em 2em;
+    font-size: 1rem;
+  }
+}
+
+/******************************************
+/* SERVICES
+/*******************************************/
+
+
+.services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+
+.services-image {
+  position: relative;
+  top: -35px;
+  width: 180px;
+  height: auto;
+}
+
+.image-title {
+  position: relative;
+  bottom: 231px;
+  right: 53px;
+  font-family: 'Koulen', cursive;
+  font-size: 15px;
+  transform: rotate(45deg);
+
+}
+
+.services h2 {
+  font-family: 'Koulen', cursive;
+  font-size: 3rem;
+}
+
+.services-container {
+  position: relative;
+  top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 900px;
+  height: 600px;
+  font-family: "brandon-grotesque",sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.grid-2 {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 45%;
+}
+
+
+.grid-2 h3 {
+  font-family: 'Koulen', cursive;
+  margin-bottom: 30px;
+}
+
+.grid-2 span {
+  margin-bottom: 10px;
+  font-family: "brandon-grotesque",sans-serif;
+  font-size: 1rem;
+}
+
+.price {
+  margin-top: 1rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .services {
+    margin-top: 1rem;
+  }
+
+  .services-container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .services-container {
+    position: relative;
+    top: 85px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 5rem;
+  }
+
+  .grid-2{
+    margin-bottom: 1rem;
+  }
+
+}
+
+/******************************************
+/* BARBER RECOMMENDATION
+/*******************************************/
+
+
+.barber-container {
+  position: relative;
+  display: flex;
+  height: 60vh;
+}
+
+.barber-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0 3rem;
+  background-color: #fbf8f2;
+}
+
+.barber-left-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.barber-left-info h2, .barber-left-info h4{
+  margin-bottom: 2rem;
+}
+
+.barber-left-info h2 {
+  font-family: 'Koulen', cursive;
+  font-size: 2rem;
+}
+
+.barber-left-info h4 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: grey;
+}
+
+.barber-left p {
+  width: 335px;
+  line-height: 24px;
+}
+
+.barber-left a {
+  margin-top: 2rem;
+  color: red;
+  font-size: 0.8rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.barber-right {
+  background-image: url('../images/barbers/amber.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size:cover;
+  /* Allows for background to cover size of container*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Keeps photo in center while resizing properly*/
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.8s;
+}
+
+.barber-right:hover {
+  filter: grayscale(0%);
+  transition: filter 0.8s;
+}
+
+@media (max-width: 900px) {
+  .barber-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .barber-left, .barber-right {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/******************************************
+/* SHOP
+/*******************************************/
+
+.supply-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  font-style: italic;
+  background-color: #ee4037;
+}
+
+.supply-container h3 {
+  margin: 3rem 0;
+  width: 600px;
+  text-align: center;
+}
+
+.supply-container a {
+  color: black;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  /* font-style: normal; */
+  font-weight: bold;
+}
+
+.fashion-image {
+  width: 180px;
+  height: auto;
+}
+
+@media (max-width: 650px) {
+  .supply-container h3 {
+    width: 400px;
+  }
+}
+
+/******************************************
+/* CLOTHING
+/*******************************************/
+
+.clothing-container {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+}
+
+.clothing-left, .top-first, .top-second, .bottom-first {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size:cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.25s
+}
+
+.clothing-left {
+  background-image: url("https://shedbarber.com/wp-content/uploads/2020/01/IMG_1342-3.jpg");
+  width: 66%;
+  height: 100%;
+}
+
+/* TODO: add javascript for transition*/
+.item-1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(34px);
+  background-color: white;
+}
+
+.clothing-right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 34%;
+}
+
+.top-first {
+  background-image: url("https://shedbarber.com/wp-content/uploads/2020/10/EJI-Back-Zoom-IG.png");
+  width: 50%;
+  height: 50%;
+}
+
+.top-second {
+  background-image: url("https://shedbarber.com/wp-content/uploads/2020/01/IMG_8222.jpg");
+  width: 50%;
+  height: 50%;
+}
+
+.bottom-first {
+  background-image: url("https://shedbarber.com/wp-content/uploads/2019/07/IMG_8329.jpg");
+  width: 100%;
+  height: 50%;
+}
+
+.clothing-left:hover, .top-first:hover, .top-second:hover, .bottom-first:hover {
+  filter: grayscale(0);
+  transition: filter 0.25s
+}
+
+/* TODO: translation needs to be done in javascript */
+/* .item-1:hover {
+  transform: translateY(0px);
+} */
+
+/******************************************
+/* SOCIALS
+/*******************************************/
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background-color: #fbf8f2;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-info h2 {
+  font-size: 2rem;
+  font-family: 'Koulen', cursive;
+}
+
+.social-info p {
+  width: 600px;
+  line-height: 24px;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.social-info ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-info li {
+  margin: 0 1em;
+  color: #ee4037;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+  .social-info p {
+    width: 350px;
+  }
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
