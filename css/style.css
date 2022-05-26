@@ -498,13 +498,13 @@ h1 {
 }
 
 /* TODO: add javascript for transition*/
-.item-1 {
+/* .item-1 {
   position: absolute;
   bottom: 0;
   right: 0;
   transform: translateY(34px);
   background-color: white;
-}
+} */
 
 .clothing-right {
   display: flex;
@@ -533,6 +533,25 @@ h1 {
 .clothing-left:hover, .top-first:hover, .top-second:hover, .bottom-first:hover {
   filter: grayscale(0);
   transition: filter 0.25s
+}
+
+@media (max-width: 1024px) {
+  .clothing-container {
+    flex-direction: column;
+    height: 110vh;
+  }
+
+  .clothing-left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .clothing-right {
+    /* display: flex;
+    flex-wrap: wrap; */
+    width: 100%;
+    height: 50%;
+  }
 }
 
 /* TODO: translation needs to be done in javascript */
@@ -568,7 +587,7 @@ h1 {
   width: 600px;
   line-height: 24px;
   text-align: center;
-  margin: 2em 0;
+  margin: 2rem 0;
 }
 
 .social-info ul {
@@ -577,15 +596,56 @@ h1 {
 }
 
 .social-info li {
-  margin: 0 1em;
+  margin: 0 1rem;
   color: #ee4037;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+
 @media (max-width: 650px) {
   .social-info p {
+    width: 350px;
+  }
+}
+
+/******************************************
+/* BOOKING
+/*******************************************/
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-color: black;
+  color: white;
+}
+
+.booking h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'Koulen', cursive;
+}
+
+.booking span {
+  width: 600px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.booking h2 + span {
+  margin-top: 1rem;
+}
+
+.contact-info {
+  margin-top: 1rem;
+}
+
+@media (max-width: 650px) {
+  .booking span {
     width: 350px;
   }
 }
