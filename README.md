@@ -18,6 +18,6 @@ refractored my css - look for repeating styles that could be made into a single 
 
 ## Lessons Learned:
 
-A problem a ran into was that the height of my containers were being displayed oddly on mobile viewports, because I was using absolute units. Using the "vh" unit beautifully fixed this problem and allowed my containers to resize vertically. I learned to think about the height of my containers and not just the width when creating a responsive layout. 
+A problem a ran into was that the height of my containers were being displayed oddly on mobile viewports because I was using absolute units. Using the "vh" unit beautifully fixed this problem and allowed my containers to resize vertically. I learned to think about the height of my containers and not just the width when creating a responsive layout. 
 
 I also learned how powerful the "position" property can be when set to "relative", "absolute", or "fixed" in conjuction with the "top", "right", "bottom" or "left" properties. Flexbox is extremely useful in positioning content, however elements may need finer adjustments that flexbox (or even margin and padding) doesn't handle well. 
