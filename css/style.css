@@ -492,7 +492,7 @@ h1 {
 }
 
 .clothing-left {
-  background-image: url("https://shedbarber.com/wp-content/uploads/2020/01/IMG_1342-3.jpg");
+  background-image: url(../images/barbers/6.jpg);
   width: 66%;
   height: 100%;
 }
@@ -513,13 +513,13 @@ h1 {
 }
 
 .top-first {
-  background-image: url("https://shedbarber.com/wp-content/uploads/2020/10/EJI-Back-Zoom-IG.png");
+  background-image: url(../images/barbers/7.jpg);
   width: 50%;
   height: 50%;
 }
 
 .top-second {
-  background-image: url("https://shedbarber.com/wp-content/uploads/2020/01/IMG_8222.jpg");
+  background-image: url(../images/barbers/8.jpg);
   width: 50%;
   height: 50%;
 }
